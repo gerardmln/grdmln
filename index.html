@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">          
+    <head>
+        <title>grdmln</title>
+        <link rel="icon" href="./assets/GRDMLNY2KLOGO.png" type="image/png">
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        
+        <!-- bootstrap css -->
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous"
+        />
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+        rel="stylesheet"
+        />
+    </head>
+    <!-- check -->
+
+        <!-- THESE ARE FOR THE DESIGNS INSTEAD OF USING CSS HEHEHEHE -->
+        <body>
+            <style>
+                @font-face {
+                    font-family: 'Y2K';
+                    src: url('./assets/y2k.TTF') format('truetype'); /* Y2K.TFF (TTF IS REALLY CAPS) */
+                }
+                @font-face {
+                    font-family: 'CREATOTHIN';
+                    src: url('./assets/CREATOTHIN.otf') format('opentype');
+                }
+                @font-face {
+                    font-family: 'MISTERFIRLEY';
+                    src: url('./assets/MISTERFIRLEY.ttf') format('truetype');
+                }
+                @font-face {
+                    font-family: 'AERO';
+                    src: url('./assets/AERO.ttf') format('truetype');
+                }
+                @font-face {
+                    font-family: 'STEELFISH';
+                    src: url('./assets/STEELFISH.ttf') format('truetype');
+                }
+                @font-face {
+                    font-family: 'ALIENSANDCOWS';
+                    src: url('./assets/ALIENSANDCOWS.ttf') format('truetype');
+                }
+
+                html, body {
+                    background-color: black; /* Set black background to prevent white during overscroll */
+                    height: 100%;
+                    margin: 0;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    
+                }
+                body {
+                    background-image: url('./assets/0426.gif'); 
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    overflow-y: auto; /* Allow vertical scrolling within the content */
+                }
+                .navbar {
+                    position: sticky; /* Make the navbar stick to the top */
+                    top: 0; /* Position it at the very top */
+                    z-index: 1030; /* Ensure it stays above other elements */
+                    border-radius: 0px; /* Smoother edges */
+                    margin: 0px; /* Add margin around the navbar */
+                    padding: 3px; /* Add padding for consistent spacing */
+                    cursor: pointer; /* Change cursor to pointer */
+                    background-color: rgba(0, 0, 0, 0.304); /* Transparent black background */
+                    backdrop-filter: blur(5px); /* Add blur effect */
+                }
+                .navbar a, .navbar .nav-link {
+                    color: rgb(255, 255, 255) !important; /* Make text white */
+                }
+                .navbar-brand {
+                    font-family: 'Y2K', sans-serif !important; /* Ensure Y2K font for GRDMLN.COM */
+                    font-size: 1.0rem; /* Adjust font size as needed */
+                 
+                }
+                .navbar-nav .nav-link {
+                    font-family: 'AERO', sans-serif; /* Apply AERO font */
+                    font-size: 0.8rem; /* Adjust font size as needed */
+                }
+                @media (min-width: 992px) {
+                    .navbar {
+                        pointer-events: auto; /* Enable click behavior in fullscreen */
+                    }
+                }
+
+                /* General container styles */
+                #about {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden; /* Ensure content stays inside the container */
+                    padding: 10px; /* Add padding for consistent spacing */
+                    box-sizing: border-box; /* Include padding in width/height calculations */
+                    
+                    
+                }
+
+                /* Responsive styles for text inside containers */
+                @media (max-width: 768px) {
+                    #about {
+                        margin: 10px auto; /* Center the container horizontally */
+                    }
+
+                    #about h1.display-5 {
+                        font-size: 6vw; /* Dynamically adjust heading font size */
+                    }
+
+                    #about p.fs-4 {
+                        font-size: 4vw; /* Dynamically adjust paragraph font size */
+                        line-height: 1.6; /* Improve readability */
+                        font-family: 'CREATOTHIN', sans-serif; /* Updated font */
+                    }
+
+                    #projects h5.card-title {
+                        font-size: 4vw; /* Dynamically adjust card title font size */
+                    }
+
+                    #projects p.card-text {
+                        font-size: 3.5vw; /* Dynamically adjust card text font size */
+                    }
+
+                    #about .btn {
+                        font-size: 3.5vw; /* Dynamically adjust button font size */
+                        padding: 8px 16px; /* Keep button padding consistent */
+                        max-width: 180px; /* Prevent button from stretching too wide */
+                    }
+                }
+
+                /* Ensure proper alignment for all screen sizes */
+                #about .text-center {
+                    text-align: center; /* Center-align all text */
+                }
+
+                .card {
+                    background-color: rgba(0, 0, 0, 0.5) !important; /* Transparent black background */
+                    backdrop-filter: blur(5px) !important; /* Add blur effect */
+                    border: none; /* Remove default card border */
+                    border-radius: 10px; /* Add rounded corners */
+                    color: white; /* Ensure text is visible on dark background */
+                }
+                .card-body {
+                    background-color: transparent !important; /* Ensure the card body is transparent */
+                }
+                .card h5.card-title {
+                    font-family: 'AERO', sans-serif; /* Apply MISTERFIRLEY font to card titles */
+                }
+                .card p.card-text {
+                    font-family: 'ALIENSANDCOWS', sans-serif; /* Updated font */
+                    color: rgba(255, 255, 255, 0.427)  ;
+                }
+                .card a.btn {
+                    background-color: rgba(255, 255, 255, 0.2) !important; /* Slightly transparent button */
+                    color: white !important; /* White text for the button */
+                    border: 1px solid white; /* Add a white border */
+                }
+                .card a.btn:hover {
+                    background-color: rgba(255, 255, 255, 0.4) !important; /* Slightly less transparent on hover */
+                }
+
+                .navbar.scrolled {
+                    background-color: rgba(0, 0, 0, 0.9) !important; /* Solid background on scroll */
+                    transition:  0.3s ease; /* Smooth transition */
+                }
+
+                button, a.btn {
+                    font-family: 'CREATOTHIN', sans-serif; /* Updated font */
+                }
+
+               #about, #projects, #projects2, #contact {
+                    scroll-margin-top: 70px; /* Adjust this value to match the navbar height */
+                   
+                }
+
+            </style>
+            </body>
+
+
+<!-- START OF THE HTML CODE -->
+    <body>
+        <nav id="navbarmain" class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./assets/GRDMLNY2KLOGO.png" alt="GRDMLN Logo" style="height: 35px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#about" class="nav-link active" style="font:size 5px;">who is grd mln?</a></li>
+                        <li class="nav-item"><a href="#projects" class="nav-link" style="font:size 5px;">listen to grd mln</a></li>
+                        <li class="nav-item"><a href="#projects2" class="nav-link"style="font:size 5px;">more about grd</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link" style="font:size 5px;">send grd mln a message!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+                <!-- MY ABOUT-->
+                <div id="about" class="position-relative d-flex justify-content-center align-items-center" style="background-image: url('./assets/GRDUNSTABLE.jpg'); background-size: cover; background-position: center; height: auto; margin: 40px 40px 0; border-radius: 10px;">
+                    <div class="container p-3">
+
+                        
+                       <!-- Foreground Content -->
+
+            <div class="container p-3 d-flex flex-column align-items-center justify-content-center text-center" style="background-color: rgba(0, 0, 0, 0.7); border-radius: 10px; z-index: 2;">
+                <div class="px-3 mb-3" style="padding: 30px; max-width: 700px;">
+                    <h1 class="display-5 fw-bold" style="color: white; font-family: 'Y2K', sans-serif;">Who is grd mln?</h1>
+                    <p class="fs-4" style="color: rgb(200, 200, 200); font-family: 'ALIENSANDCOWS', sans-serif;">
+                        Gerard Malaluan, also known as grd min, is a Filipino rapper and singer who creates 
+                        music in genres like R&B, Hip-hop, Foodnb (Pluggnb), and Melodic Rap. He’s passionate 
+                        about making tracks that are both entertaining and relatable, and he’s steadily making 
+                        his mark in the Filipino R&B and rap scene.
+                        </p>
+                        <p class="fs-4" style="color: rgb(200, 200, 200); font-family: 'ALIENSANDCOWS', sans-serif;">
+                        He’s also an IT student at National University - Lipa, currently learning web 
+                        development, and built this website using HTML, CSS, and JavaScript.
+                    </p>
+                             
+                    <!-- <div>
+                        <a href="" class="btn btn-secondary btn-sm" style="color: white; font-family: 'ALIENSANDCOWS', sans-serif;">FOLLOW ME!</a>
+                    </div> -->
+                </div>
+
+            </div>
+                    </div>
+                </div>
+        
+
+
+        
+        
+        <!-- MY SONGS-->
+        <div id="projects" class="position-relative d-flex justify-content-center align-items-center" style="background-image: url('./assets/GRDPROJECTSBG2.jpg'); background-size: cover; background-position: center; height: auto; margin: 40px 40px 0; border-radius: 10px;">
+            <div class="container p-5 text-center">
+                
+                <h1 class="display-5 fw-bold" style="color: rgb(255, 255, 255); font-family: 'AERO', sans-serif;"></h1>
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="assets/HANGGANGDULO.jpg" alt="" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">HANGGANG DULO</h5>
+                                <p class="card-text flex-grow-1">Ft. Jetnekko</p>
+                                <a href="https://open.spotify.com/album/4y4J5cXGZ7kia4QZoywaKN?si=Dv9_QSOBTE6MYsloYWIY6A" class="btn btn-primary mt-auto">Listen on Spotify</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="assets/SISIGRICE.jpg" alt="" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">SISIG+RICE</h5>
+                                <p class="card-text flex-grow-1">Tiktok Choice!</p>
+                                <a href="https://grdmln.lnk.to/sisigrice" class="btn btn-primary mt-auto">Choose streaming platform</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="assets/IN4U.jpg" alt="" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">IN4U</h5>
+                                <p class="card-text flex-grow-1">Ft. Ruther and Monty Gi</p>
+                                <a href="http://ruther.lnk.to/in4u" class="btn btn-primary mt-auto">Choose streaming platform</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="assets/4MYEVERYTHING.jpg" alt="" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">4MYEVERYTHING</h5>
+                                <p class="card-text flex-grow-1">Ft. Tyrone</p>
+                                <a href="https://grdmln.lnk.to/4MYEVERYTHING" class="btn btn-primary mt-auto">Choose streaming platform</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- card 5 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="assets/4ME.jpg" alt="" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">4ME</h5>
+                                <p class="card-text flex-grow-1">Produced by Andrew Robles</p>
+                                <a href="https://grdmln.lnk.to/4ME" class="btn btn-primary mt-auto">Choose streaming platform</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 6 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="assets/4217PROMO.gif" alt="" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">4217 (MUSIC VIDEO)</h5>
+                                <p class="card-text flex-grow-1">Directed by Daniel James</p>
+                                <a href="https://youtu.be/__cwGr3QxAc?si=l2MuAF8qw6cF8D0n" class="btn btn-primary mt-auto">Watch video on Youtube</a>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+
+        <!-- MORE ABOUT GRD MLN -->
+
+            <div id="projects2" class="position-relative d-flex justify-content-center align-items-center mb-5" style="background-image: url('./assets/GRDPROJECTS2.jpg'); background-size: cover; background-position: center; height: auto; margin: 40px 40px 0; border-radius: 10px;">
+                <div class="container p-5 text-center">
+                    <h1 class="display-5 fw-bold" style="color: white; font-family: 'AERO', sans-serif;"></h1>
+                    <div class="row g-4">
+                        <!-- Card 1 -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card h-100 d-flex flex-column">
+                                <img src="assets/WEBDEVELOPMENT.png" alt="" class="card-img-top">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">WEB DEVELOPMENT</h5>
+                                    <p class="card-text flex-grow-1">My GitHub Projects :D</p>
+                                    <a href="https://github.com/gerardmln" class="btn btn-primary mt-auto">See my Github</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card h-100 d-flex flex-column">
+                                <img src="assets/GRDLINKTREE.png" alt="" class="card-img-top">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">MY LINKTREE</h5>
+                                    <p class="card-text flex-grow-1">Will be directed to my Linktree!</p>
+                                    <a href="https://linktr.ee/grd.mln" class="btn btn-primary mt-auto">View all my links</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="card h-100 d-flex flex-column">
+                                <img src="assets/grdmln-logo.png" alt="" class="card-img-top">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">MIXING SERVICES!</h5>
+                                    <p class="card-text flex-grow-1">Mixing services available. Listen to my portfolio first!</p>
+                                    <a href="https://open.spotify.com/playlist/2wS6da6hCDjU9Ho62sSrCY?si=2d4a550345324487" class="btn btn-primary mt-auto">Play on Spotify</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- END OF MY SONGS AND STUFF -->
+        <!-- contact me -->
+
+<!-- contact me section -->
+
+<div id="contact" class="position-relative d-flex justify-content-center align-items-center" style="background-image: url('./assets/CONTACTME.jpg'); background-size: cover; background-position: center; height: auto; margin: 40px 40px 0; border-radius: 10px;">
+    <div class="container p-3">
+
+<div class="container p-3 d-flex flex-column align-items-center justify-content-center text-center" style="background-color: rgba(0, 0, 0, 0.7); border-radius: 10px; z-index: 2;">
+<div class="px-3 mb-3" style="padding: 30px; max-width: 700px;">
+    <h2 class="text-center mb-4 text-white" style="font-family: 'MISTERFIRLEY', sans-serif;">contact grd mln!</h2>
+    <form>
+        <div class="mb-1">
+            <label for="name" class="form-label text-white">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required style="background-color: #ffffffa3; color: white; border: none;">
+        </div>
+        <div class="mb-1">
+            <label for="email" class="form-label text-white">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required style="background-color: #ffffffa3; color: white; border: none;">
+        </div>
+        <div class="mb-1">
+            <label for="message" class="form-label text-white">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message (required!)" required style="background-color: #ffffffa3; color: white; border: none;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-secondary btn-sm mt-4 d-flex justify-content-center w-100" style="color: white; font-family: 'ALIENSANDCOWS', sans-serif;">Send Message</button>
+    </form>
+            
+</div>
+
+</div>
+    </div>
+</div>
+
+
+<!-- follow me socials -->
+<div class="container-fluid p-0 mb-2">
+    <div class="container rounded-3 p-4 text-center" style="background-color: rgba(0, 0, 0, 0);">
+        <div class="d-flex justify-content-center gap-4">
+            <a href="https://www.instagram.com/grd.mln/" class="text-decoration-none text-white"><i class="bi bi-instagram fs-2"></i></a>
+            <a href="https://open.spotify.com/artist/0Z39OVFeQFS76u5GHCj1OY?si=73nNlcwLSBi44FQbrARLCQ" class="text-decoration-none text-white"><i class="bi bi-spotify fs-2"></i></a>
+            <a href="https://www.youtube.com/channel/UC0REYN_b4v7IrIn_EWb3h4w" class="text-decoration-none text-white"><i class="bi bi-youtube fs-2"></i></a>
+            <a href="https://www.facebook.com/grdmln" class="text-decoration-none text-white"><i class="bi bi-facebook fs-2"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+
+<footer class="text-white text-center py-3" style="background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px); font-family: 'CREATOTHIN', sans-serif; color: rgba(255, 255, 255, 0.427);">  
+    <p class="mb-0">&copy; 2025 grdmln. All rights reserved.</p>
+</footer>
+</footer>
+
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+
+        <script src="animation-support.js"></script>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+        <!-- ABOUT GRD MLN -->
+
+        <div id="about" class="position-relative d-flex justify-content-center align-items-center" style="background-image: url('./assets/GRDUNSTABLE.JPG'); background-size: cover; background-position: center; height: auto; margin: 40px 40px 0; border-radius: 10px;">
+            
+            <!-- Foreground Content -->
+
+            <div class="container p-3 d-flex flex-column align-items-center justify-content-center text-center" style="background-color: rgba(0, 0, 0, 0.7); border-radius: 10px; z-index: 2;">
+                <div class="px-3 mb-3" style="padding: 30px; max-width: 700px;">
+                    <h1 class="display-5 fw-bold" style="color: white; font-family: 'Y2K', sans-serif;">WHO IS GRD MLN?</h1>
+                    <p class="fs-4" style="color: white; font-family: 'ALIENSANDCOWS', sans-serif;">
+                        Gerard Malaluan, a.k.a. grd mln, is a Filipino rapper and singer born in two thousand and four, based in Lipa, Batangas. 
+                        He writes captivating music across genres like R&B, Hip-hop, foodnb (pluggnb), and Melodic Rap.
+
+                        grd is passionate about creating entertaining and relatable tracks, steadily making a name for 
+                        himself in the Filipino R&B and rap scene. From Lipa to QC—maririnig mo.
+                    </p>
+                             
+                    <!-- <div>
+                        <a href="" class="btn btn-secondary btn-sm" style="color: white; font-family: 'ALIENSANDCOWS', sans-serif;">FOLLOW ME!</a>
+                    </div> -->
+                </div>
+
+            </div>
+        </div> <!-- End of #about -->
+
+
+
+
+
+        #about {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Ensure content stays inside the container */
+            padding: 20px; /* Add padding for consistent spacing */
+            box-sizing: border-box; /* Include padding in width/height calculations */
+        }
+
+
+        #about {
+            width: 90%; /* Extend the container width for smaller screens */
+            margin: 10px auto; /* Center the container horizontally */
+        }
+
+
+        <div class="container-fluid  p-4" style="background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px);">
+            <h2 class="text-center mb-4 text-white"></h2>
+            <form>
+                <div class="mb-1">
+                    <label for="name" class="form-label text-white">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required style="background-color: #00020480; color: white; border: none;">
+                </div>
+                <div class="mb-1">
+                    <label for="email" class="form-label text-white">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required style="background-color: #00020480; color: white; border: none;">
+                </div>
+                <div class="mb-1">
+                    <label for="message" class="form-label text-white">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Enter your message (required!)" required style="background-color: #00020480; color: white; border: none;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-secondary btn-sm mt-4 d-flex justify-content-center w-100" style="color: white; font-family: 'ALIENSANDCOWS', sans-serif;">Send Message</button>
+            </form>
+        </div>
+
+
+
+        DID YOU KNOW? This website was built entirely by grd mln, using knowledge from Web Systems and Technologies and a bit of help from GitHub Copilot.
