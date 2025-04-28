@@ -11,7 +11,7 @@
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
 
-        
+
         <!-- bootstrap css -->
         <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -69,12 +69,18 @@
                     position: sticky; /* Make the navbar stick to the top */
                     top: 0; /* Position it at the very top */
                     z-index: 1030; /* Ensure it stays above other elements */
-                    border-radius: 0px; /* Smoother edges */
-                    margin: 0px; /* Add margin around the navbar */
+                    border-radius: 15px; /* Smooth edges for the navbar */
+                    margin: 10px; /* Add margin around the navbar to create a floating effect */
                     padding: 3px; /* Add padding for consistent spacing */
                     cursor: pointer; /* Change cursor to pointer */
-                    background-color: rgba(0, 0, 0, 0.304); /* Transparent black background */
+                    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
                     backdrop-filter: blur(5px); /* Add blur effect */
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for floating effect */
+                    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+                }
+                .navbar.scrolled {
+                    background-color: rgba(0, 0, 0, 0.9) !important; /* Solid background on scroll */
+                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7); /* Enhance shadow on scroll */
                 }
                 .navbar a, .navbar .nav-link {
                     color: rgb(255, 255, 255) !important; /* Make text white */
@@ -167,11 +173,6 @@
                 }
                 .card a.btn:hover {
                     background-color: rgba(255, 255, 255, 0.4) !important; /* Slightly less transparent on hover */
-                }
-
-                .navbar.scrolled {
-                    background-color: rgba(0, 0, 0, 0.9) !important; /* Solid background on scroll */
-                    transition:  0.3s ease; /* Smooth transition */
                 }
 
                 button, a.btn {
